@@ -12,4 +12,5 @@ public interface ContentHandler {
 	 * pour return la valeur du compteur 
 	 */
 	int getCompteur();
+	public void commentLine(String comment);
 }

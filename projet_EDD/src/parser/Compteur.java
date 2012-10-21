@@ -11,9 +11,11 @@ public class Compteur implements ContentHandler{
 	 * ce paramttre qui va nous aider a compter
 	 */
 	private int compteur;
+	private int compteurCmt;
 	
 	 public Compteur() {
 		compteur=0;
+		compteurCmt=0;
 	}
 	 /**
 	  * redifintion de la fonction defaultline 
@@ -32,6 +34,15 @@ public class Compteur implements ContentHandler{
 	public int getCompteur() {
 		// TODO Auto-generated method stub
 		return compteur;
+	}
+	public int getCompteurCmt() {
+		// TODO Auto-generated method stub
+		return compteurCmt;
+	}
+	@Override
+	public void commentLine(String comment) {
+		// TODO Auto-generated method stub
+		compteurCmt++;
 	}
 
 }
