@@ -6,6 +6,10 @@ public interface ContentHandler {
 	 * @return entier : c'est le nombre de ligne trouve dans le fichier
 	 */
 	
-	int defaultLine(String content);
+	void defaultLine(String content);
 	
+	/**
+	 * pour return la valeur du compteur 
+	 */
+	int getCompteur();
 }
