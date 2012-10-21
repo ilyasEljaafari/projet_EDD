@@ -33,21 +33,27 @@ public class FileParser {
 	 * @param file
 	 * @param contentHandler
 	 */
-	public static void parse(File file,ContentHandler contentHandler){
+	public static void parse(File file,ContentHandler compteur){
 
 	
 	try {
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String line = "" ;
 		while( (line =br.readLine()) != null){
-			contentHandler.defaultLine(line);
+			if(line.startsWith("#"))
+			{
+				compteur.commentLine(line);
+			}
+			else
+			{
+				compteur.defaultLine(line);
+			}
 		}
 		}catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 		
-		System.out.println("Le fichier "+file.getName()+" contient "+
-		contentHandler.getCompteur()+" ligne(s)");
+		
 	}
 
 

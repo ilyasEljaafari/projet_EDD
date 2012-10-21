@@ -13,4 +13,5 @@ public interface ContentHandler {
 	 */
 	int getCompteur();
 	public void commentLine(String comment);
+	int getCompteurCmt();
 }
