@@ -40,14 +40,20 @@ public class FileParser {
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String line = "" ;
 		while( (line =br.readLine()) != null){
-			if(line.startsWith("#"))
-			{
-				compteur.commentLine(line);
+			if(line!=""){
+				if(line.startsWith("#"))
+				{
+					compteur.commentLine(line);
+				}
+				else
+				{
+					compteur.defaultLine(line);
+				}
+				}
+			else{
+				compteur.lineVide(line);
 			}
-			else
-			{
-				compteur.defaultLine(line);
-			}
+			
 		}
 		}catch (Exception e) {
 			System.out.println(e.getMessage());

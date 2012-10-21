@@ -13,6 +13,7 @@ public class Example {
 			System.out.println("Le fichier "+file.getName()+" contient "+
 			compteur.getCompteur()+compteur.getCompteurCmt()+" ligne(s) dont "
 					+ compteur.getCompteurCmt() + " commentaire"  );
+			System.out.println("nombre de line vide est : "+compteur.getCompteurVide());
 		
 		}	
 }

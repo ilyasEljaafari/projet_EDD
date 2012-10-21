@@ -12,6 +12,8 @@ public class Compteur implements ContentHandler{
 	 */
 	private int compteur;
 	private int compteurCmt;
+	private int compteurVide;
+	
 	
 	 public Compteur() {
 		compteur=0;
@@ -43,6 +45,16 @@ public class Compteur implements ContentHandler{
 	public void commentLine(String comment) {
 		// TODO Auto-generated method stub
 		compteurCmt++;
+	}
+	@Override
+	public void lineVide(String line) {
+		// TODO Auto-generated method stub
+		compteurVide++;
+	}
+	@Override
+	public int getCompteurVide() {
+		// TODO Auto-generated method stub
+		return compteurVide;
 	}
 
 }
